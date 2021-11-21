@@ -1,0 +1,19 @@
+{
+	"name": "learn-bin",
+	"version": "0.0.0",
+	"scripts": {
+		"dev": "rollup -c -w",
+		"build": "rollup -c",
+		"start": "sirv public --host",
+		"fmt": "prettier --write ."
+	},
+	"devDependencies": {
+		"prettier": "^2.4.1",
+		"rollup": "2.60.0",
+		"rollup-plugin-livereload": "*",
+		"rollup-plugin-terser": "7.0.2",
+		"rollup-plugin-typescript2": "0.31.0",
+		"sirv-cli": "^1.0.14",
+		"typescript": "^4.3.2"
+	}
+}

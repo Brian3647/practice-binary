@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	font-family: 'Roboto Mono', sans-serif;
+	width: 100vw;
+	height: 100vh;
+	background: #08080b;
+	text-align: center;
+}
+
+@media (max-width: 550px) {
+	html,
+	body {
+		font-size: 13px;
+	}
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.main {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.header {
+	position: absolute;
+	top: 7rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.title {
+	font-size: 3rem;
+	color: #fff;
+	font-weight: 600;
+	margin-bottom: 0.75rem;
+}
+
+.description {
+	font-size: 2.2rem;
+	color: #828cbf;
+	font-weight: 400;
+	text-align: center;
+}
+
+.infowrapper {
+	width: 100vw;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.infotext {
+	color: #97a1f0;
+	font-size: 1.8rem;
+	font-weight: semibold;
+	font-family: Roboto Mono;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.bit {
+	color: inherit;
+	text-decoration: underline;
+	border: none;
+	background: inherit;
+	font-size: 2rem;
+	margin: 0;
+	padding: 3px;
+	cursor: pointer;
+}
+
+.submit {
+	text-decoration: none;
+	border: none;
+	background: inherit;
+	font-size: 1.2rem;
+	margin: 0;
+	padding: 0.2em 1em;
+	border: 2px solid #fff;
+	cursor: pointer;
+	color: #fff;
+}
+
+.submit:hover {
+	background: #fff;
+	color: #08080b;
+}
+
+@media (max-height: 700px) {
+	.header {
+		top: 4rem;
+	}
+}
+
+@media (max-height: 500px) {
+	.header {
+		top: 3rem;
+	}
+}

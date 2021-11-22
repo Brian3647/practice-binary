@@ -2,6 +2,12 @@
 // https://github.com/Brian3647/binary-number-translator/blob/main/lib/index.ts
 
 /**
+	Max result (generated from 11111111).
+	Not actually used in `convert`, but may be useful 
+*/
+export const BYTE_SIZE = 255;
+
+/**
  * Converts bytes into numbers.
  * @param {string} input Input string to convert.
  * @returns {number | null} The parsed number or null if the input isn't correct

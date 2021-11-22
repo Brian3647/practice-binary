@@ -1,8 +1,22 @@
 import { convert } from './binary_translator';
-import { next, result, setResult } from './lib';
+import {
+	headerTitle,
+	next,
+	result,
+	setHeaderTitle,
+	setResult
+} from './lib';
 
 let score = 0;
 let expected = next(score);
+
+const setWrong = (v = false) => {
+	if (v) {
+		setHeaderTitle(headerTitle('Wrong!', true));
+	} else {
+		setHeaderTitle(headerTitle(score));
+	}
+};
 
 const reset = (setScore: boolean = true) => {
 	buttons.forEach((b) => (b.innerHTML = '0'));
@@ -15,7 +29,7 @@ const reset = (setScore: boolean = true) => {
 
 const buttons = new Array(8)
 	.fill(0)
-	.map((_, i) => `bit_${i + 1}`)
+	.map((_, i) => `bit_${i + 1}`) // Generate `bit_1`, `bit_2`, ..., `bit_8`
 	.map((id) => document.getElementById(id)!);
 
 const update = () => {
@@ -37,10 +51,11 @@ const check = () => {
 		expected = next(score);
 		reset(false);
 	} else {
-		alert('Wrong!');
 		score = 0;
 		reset();
 		expected = next(score);
+		setWrong(true);
+		setTimeout(setWrong, 1000);
 	}
 };
 
@@ -54,9 +69,11 @@ buttons.forEach((elem) => {
 	});
 });
 
-document.getElementById('SUBMIT')!.addEventListener('click', (e) => {
-	e.preventDefault();
-	e.stopPropagation();
+document
+	.getElementById('SUBMIT')!
+	.addEventListener('click', (e) => {
+		e.preventDefault();
+		e.stopPropagation();
 
-	check();
-});
+		check();
+	});

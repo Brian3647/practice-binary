@@ -1,9 +1,9 @@
-export const BYTE_SIZE = 255;
+import { BYTE_SIZE } from './binary_translator';
 
 export const headerDescription = <T>(e: T) =>
 	`Expected: ${e}`;
-export const headerTitle = <T>(s: T) =>
-	`Learn binary - Score: ${s}`;
+export const headerTitle = <T>(s: T, noScore = false) =>
+	`Learn binary - ${(!noScore && 'Score: ') || ''}${s}`;
 export const result = <T>(x: T) => `=${x}`;
 
 export const genNextExpected = (): number => {

@@ -1,7 +1,9 @@
 export const BYTE_SIZE = 255;
 
-export const headerDescription = <T>(e: T) => `Expected: ${e}`;
-export const headerTitle = <T>(s: T) => `Learn binary - Score: ${s}`;
+export const headerDescription = <T>(e: T) =>
+	`Expected: ${e}`;
+export const headerTitle = <T>(s: T) =>
+	`Learn binary - Score: ${s}`;
 export const result = <T>(x: T) => `=${x}`;
 
 export const genNextExpected = (): number => {
@@ -9,7 +11,8 @@ export const genNextExpected = (): number => {
 };
 
 export const setHeaderDescription = (val: string) => {
-	document.getElementById('HEADER_DESCRIPTION')!.innerHTML = val;
+	document.getElementById('HEADER_DESCRIPTION')!.innerHTML =
+		val;
 };
 
 export const setResult = (val: string) => {

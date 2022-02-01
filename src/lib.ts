@@ -16,7 +16,8 @@ export const setHeaderDescription = (val: string) => {
 };
 
 export const setResult = (val: string) => {
-	document.getElementById('RESULT')!.innerHTML = val;
+	const res = document.getElementById('RESULT');
+	(res !== null) && (res.innerHTML = val);
 };
 
 export const setHeaderTitle = (val: string) => {

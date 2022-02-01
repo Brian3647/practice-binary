@@ -99,6 +99,10 @@ a {
 	border: 2px solid #fff;
 	cursor: pointer;
 	color: #fff;
+	font-weight: 600;
+	font-family: Roboto Mono;
+	transition: all 0.2s ease-in-out;
+	margin-bottom: 20px;
 }
 
 .submit:hover {
@@ -116,4 +120,12 @@ a {
 	.header {
 		top: 3rem;
 	}
+}
+
+.timer {
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: 600;
+	font-family: Roboto Mono;
+	margin-bottom: 1rem;
 }

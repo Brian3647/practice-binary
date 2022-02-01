@@ -45,7 +45,6 @@ const check = () => {
 	const fullVal = buttons.map((b) => b.innerHTML).join('');
 	const guess = convert(fullVal);
 
-	console.log(guess, expected);
 	if (guess === expected) {
 		score++;
 		expected = next(score);

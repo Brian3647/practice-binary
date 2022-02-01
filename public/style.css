@@ -87,6 +87,7 @@ a {
 	margin: 0;
 	padding: 4px;
 	cursor: pointer;
+	font: inherit;
 }
 
 .submit {
